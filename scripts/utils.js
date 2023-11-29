@@ -137,7 +137,7 @@ export function startTimer(timerElement, timer, cards) {
     
     setTimeout(() => {
         clearInterval(decreaseTimer);
-        if(isWin(cards)) {
+        if(!isWin(cards)) {
             showLosePopup(app);
         }
     }, timer)
