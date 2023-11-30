@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
 :root {
-    --card-color: #ccc;
+    --card-color: #3a3a3a;
     --full-timer-color: #3047ff;
     --mid-timer-color: #20d600;
     --low-timer-color: rgb(255, 0, 0);
@@ -13,7 +15,7 @@
 }
 
 body {
-    font-family: cursive;
+    font-family: 'Nova Square', sans-serif;
 }
 
 .container {
@@ -45,6 +47,17 @@ img {
     align-items: center;
     justify-content: center;
     padding: 50px 0;
+    color: white;
+    --s: 76px;
+    /* control the size */
+    --c: #000000;
+    --_g: conic-gradient(var(--c) 25%, #0000 0) 0 0;
+    background:
+        var(--_g)/calc(2*var(--s)) calc(var(--s)/9.5),
+        var(--_g)/calc(var(--s)/9.5) calc(2*var(--s)),
+        repeating-conic-gradient(#0000 0 25%, var(--c) 0 50%) var(--s) 0 /calc(2*var(--s)) calc(2*var(--s)),
+        radial-gradient(50% 50%, #2eb044 98%, var(--c)) 0 0/var(--s) var(--s);
+
 }
 
 .app .main-title {
@@ -66,13 +79,10 @@ img {
     border-radius: 5px;
     background-color: transparent;
     cursor: pointer;
-    box-shadow: 0 0 3px 0px black inset;
+    color: white;
+    box-shadow: 0 0 7px 0px rgb(255, 255, 255) inset;
     backdrop-filter: blur(2px);
     transition: all var(--animation-timing) ease-in-out;
-    -webkit-transition: all var(--animation-timing) ease-in-out;
-    -moz-transition: all var(--animation-timing) ease-in-out;
-    -ms-transition: all var(--animation-timing) ease-in-out;
-    -o-transition: all var(--animation-timing) ease-in-out;
 }
 
 .start-section .start-btn:hover {
@@ -94,7 +104,6 @@ img {
     display: grid;
     padding: 10px;
     margin: 10px auto;
-    box-shadow: 0 0 10px #9d9d9d;
     border-radius: 5px;
     gap: 10px;
     perspective: 1000px;
@@ -108,7 +117,7 @@ img {
 
 .game-section .game-board .card {
     background-color: var(--card-color);
-    padding: 10px 10px 6px;
+    padding: 5px 5px 0px;
     border-radius: 3px;
     cursor: pointer;
     transform-style: preserve-3d;
@@ -117,7 +126,7 @@ img {
 }
 
 .game-section .game-board .card:hover {
-    background-color: #b8b8b8;
+    background-color: #303030;
 }
 
 .game-section .game-board .card img {
@@ -137,7 +146,6 @@ img {
 
 .game-section .reload img {
     position: relative;
-    z-index: -1;
 }
 
 .game-section .reload:hover {
@@ -168,8 +176,10 @@ img {
     font-family: inherit;
     background-color: transparent;
     cursor: pointer;
+    color: white;
     border-radius: 5px;
     transition: all var(--animation-timing);
+    font-weight: bold;
 }
 
 .result .btn:hover {
